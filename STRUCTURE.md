@@ -8,14 +8,10 @@ Este documento mapeia todas as seções da landing page para facilitar modifica�
 
 1. [Navegação](#1-navegação)
 2. [Hero Section](#2-hero-section)
-3. [Statistics Section](#3-statistics-section)
-4. [Feature 1 - Gestão Financeira](#4-feature-1---gestão-financeira)
-5. [Feature 2 - Retenção pelo Hábito](#5-feature-2---retenção-pelo-hábito)
-6. [Feature 3 - Profissionalismo](#6-feature-3---profissionalismo)
-7. [Professors Grid](#7-professors-grid)
-8. [Pricing](#8-pricing)
-9. [Final CTA](#9-final-cta)
-10. [Footer](#10-footer)
+3. [Features Carousel](#3-features-carousel)
+4. [Pricing](#4-pricing)
+5. [Final CTA](#5-final-cta)
+6. [Footer](#6-footer)
 
 ---
 
@@ -26,22 +22,24 @@ Este documento mapeia todas as seções da landing page para facilitar modifica�
 **Background:** `--neutral-50` (#f2f1ed)
 
 ### Conteúdo:
-- Logo (ícone SVG + texto "Klassy")
-- Botão "Começar" (`.btn-small`)
+- **Logo:** Esquerda (ícone SVG + texto "Klassy")
+- **Links:** Centro (Funcionalidades, Soluções, Sobre, Preços)
+- **Ações:** Direita (Idioma, Login, Botão "Começar grátis")
 
 ### Estilos Relacionados:
 ```css
 .nav
 .nav-content
 .logo
-.logo-icon
-.logo-text
+.nav-links
+.nav-actions
+.nav-login
 .btn-small
 ```
 
 ### Comportamento:
 - Sticky no topo
-- Sombra sutil ao rolar (via JavaScript)
+- Layout flexbox com 3 seções (Left/Center/Right)
 - Borda inferior sutil
 
 ---
@@ -53,14 +51,20 @@ Este documento mapeia todas as seções da landing page para facilitar modifica�
 **Background:** `--neutral-50` (#f2f1ed)
 
 ### Conteúdo:
-- **Headline:** "Transforme suas aulas particulares em uma Escola Digital completa."
-- **Subheadline:** Texto explicativo sobre gestão financeira e área do aluno
-- **CTA:** Botão "Começar Agora" (`.btn-primary`)
-- **Mockups:** Grid 2:1 com dashboard desktop e app mobile
+- **Coluna Esquerda (Texto):**
+  - **Headline:** "Transforme suas aulas em uma Escola Digital." (Codec Pro, 72px)
+  - **Subheadline:** Texto explicativo sobre parceiro de design educacional
+  - **CTA:** Botão Primário ("Começar grátis") + Link Secundário ("Ver vídeo")
+- **Coluna Direita (Visual):**
+  - Composição flutuante estilo Gamma
+  - Card Principal: Dashboard (Macbook)
+  - Card Secundário: Professor (Topo Dir)
+  - Card Terciário: Contexto/Alunos (Baixo Esq)
 
 ### Imagens Utilizadas:
-- `feature_mockup_1_1769565802344.png` (Dashboard)
-- `feature_mockup_2_1769565819402.png` (App Mobile)
+- `assets/Images/macbook.png` (Principal)
+- `assets/Images/professor_sala.png` (Secundária)
+- `assets/Images/pessoas_andando.jpg` (Terciária)
 
 ### Estilos Relacionados:
 ```css
@@ -68,191 +72,72 @@ Este documento mapeia todas as seções da landing page para facilitar modifica�
 .hero-content
 .hero-title
 .hero-subtitle
-.hero-mockups
-.mockup-desktop
-.mockup-mobile
+.hero-actions
+.hero-visual
+.visual-card
+.card-main
+.card-secondary
+.card-tertiary
 ```
 
 ### Layout:
-- Padding: 120px vertical (desktop) / 80px (mobile)
-- Conteúdo centralizado
-- Grid de mockups: 2fr 1fr
+- Grid: 2 colunas (Texto / Visual)
+- Gap: 40px (`--space-10`)
+- Visual com elementos flutuantes e rotação suave no hover
 
 ---
 
-## 3. Statistics Section
+## 3. Features Carousel
 
-**Localização HTML:** Linhas 56-79  
-**Classe CSS Principal:** `.stats`  
-**Background:** `--neutral-0` (#FFFFFF)
+**Localização HTML:** `<section class="features-carousel" id="features">`
 
-### Conteúdo:
-- **Grid de 4 Estatísticas:**
-  - 500+ Professores
-  - 15.000+ Alunos Ativos
-  - 98% Taxa de Retenção
-  - R$ 2M+ Processado/Mês
-- **Gráfico Visual:** Imagem de crescimento minimalista
+**Conteúdo:**
+- **Cabeçalho:** Título H2 "Todos os recursos que você precisa" + Subtítulo.
+- **Carousel Window:** Container com scroll horizontal (`overflow-x: auto`).
+- **Cards (4 total):**
+  - **Card 1:** Gestão Financeira (ícone: cifrão/dólar)
+  - **Card 2:** Retenção pelo Hábito (ícone: check/círculo)
+  - **Card 3:** Portal do Aluno Premium (ícone: usuários)
+  - **Card 4:** Acompanhamento Pedagógico (ícone: livro)
+- **Controles:** Botões de navegação (← / →).
 
-### Imagens Utilizadas:
-- `statistics_graph_1769565782480.png`
+**Ícones:**
+- SVG inline, cor `--primary-900` (#710014)
+- Tamanho: 32x32px dentro de container 64x64px
+- Background do container: `--neutral-50`
 
-### Estilos Relacionados:
-```css
-.stats
-.stats-grid
-.stat-item
-.stat-number
-.stat-label
-.stats-visual
+**Estilos Principais:**
+- `.features-carousel`: Padding 80px/120px vertical, background `--neutral-50`.
+- `.carousel-window`: Flexbox horizontal, scroll-snap, gap 24px.
+- `.feature-card`: Card branco, shadow, radius-lg, width 350px, height 480px.
+- `.feature-card-icon`: Container 64x64px, background neutro, ícone vermelho.
+- `.carousel-btn`: Botões circulares 48x48px, borda 2px.
+
+**Comportamento:**
+- **Auto-Rotação:** Cards rodam automaticamente a cada 5 segundos (transform-based).
+- **Pausa no Hover:** Rotação pausa quando mouse está sobre o track.
+- **Indicadores de Progresso:** 4 dots dinâmicos abaixo do carrossel (10px normal, 28x10px ativo).
+- **Navegação Manual:** Botões ←/→ e clique nos dots resetam timer de rotação.
+- **Transição:** `transform: translateX()` com `transition: var(--duration-slow)`.
+- **Scroll Snap:** N/A (usa transform em vez de scroll).
+- **Hover nos Cards:** Cards elevam 8px (`translateY`) e sombra aumenta.
+
+**Estrutura Técnica:**
+```
+.carousel-container (position: relative, max-width: 600px)
+  └── .carousel-track (display: flex, transform: translateX(-N%))
+       └── .carousel-slide (min-width: 100%, flex-shrink: 0)
+            └── .feature-card (conteúdo visual)
+  └── .carousel-arrow.carousel-prev (absolute left)
+  └── .carousel-arrow.carousel-next (absolute right)
+.carousel-dots (fora do container, centralizado)
 ```
 
-### Layout:
-- Grid: 4 colunas (desktop) / 2 colunas (mobile)
-- Números grandes em burgundy
-- Labels em cinza neutro
-- Bordas superior e inferior
-
 ---
 
-## 4. Feature 1 - Gestão Financeira
+## 4. Pricing
 
-**Localização HTML:** Linhas 81-102  
-**Classe CSS Principal:** `.feature.feature-left`  
-**Background:** `--neutral-50` (#f2f1ed)
-
-### Conteúdo:
-- **Título:** "O fim da caixa preta financeira"
-- **Texto:** Descrição sobre previsibilidade financeira
-- **Lista de Features:**
-  - Controle de mensalidades automático
-  - Relatórios de receita em tempo real
-  - Previsão de faturamento mensal
-  - Histórico completo de pagamentos
-- **Imagem:** Dashboard financeiro (esquerda)
-
-### Imagens Utilizadas:
-- `dashboard_mockup_1769564880138.png`
-
-### Estilos Relacionados:
-```css
-.feature
-.feature-left
-.feature-grid
-.feature-image
-.feature-content
-.feature-title
-.feature-text
-.feature-list
-```
-
-### Layout:
-- Grid 1:1 (imagem esquerda, texto direita)
-- Espaçamento: 120px vertical
-- Lista com checkmarks burgundy
-
----
-
-## 5. Feature 2 - Retenção pelo Hábito
-
-**Localização HTML:** Linhas 104-125  
-**Classe CSS Principal:** `.feature.feature-right`  
-**Background:** `--neutral-0` (#FFFFFF)
-
-### Conteúdo:
-- **Título:** "O diferencial que fideliza"
-- **Texto:** Descrição sobre sistema de exercícios diários
-- **Lista de Features:**
-  - 5 exercícios liberados por dia
-  - Sistema de streaks e conquistas
-  - Feedback instantâneo de acertos
-  - Gamificação que vicia
-- **Imagem:** App mobile (direita)
-
-### Imagens Utilizadas:
-- `mobile_app_mockup_1769564897373.png`
-
-### Estilos Relacionados:
-```css
-.feature
-.feature-right
-.feature-grid (com direction: rtl)
-.feature-image
-.feature-content
-```
-
-### Layout:
-- Grid 1:1 (texto esquerda, imagem direita - invertido)
-- Background alternado (branco)
-- Mesmo espaçamento vertical
-
----
-
-## 6. Feature 3 - Profissionalismo
-
-**Localização HTML:** Linhas 127-148  
-**Classe CSS Principal:** `.feature.feature-left`  
-**Background:** `--neutral-50` (#f2f1ed)
-
-### Conteúdo:
-- **Título:** "Uma experiência de franquia"
-- **Texto:** Descrição sobre portal profissional
-- **Lista de Features:**
-  - Perfil personalizável com avatar
-  - Feed de notícias da turma
-  - Sistema de níveis e badges
-  - Área social entre alunos
-- **Imagem:** Avatar e gamificação (esquerda)
-
-### Imagens Utilizadas:
-- `student_avatar_1769564959429.png`
-
-### Estilos Relacionados:
-```css
-.feature
-.feature-left
-(mesmos estilos da Feature 1)
-```
-
-### Layout:
-- Grid 1:1 (imagem esquerda, texto direita)
-- Background alternado (creme)
-
----
-
-## 7. Professors Grid
-
-**Localização HTML:** Linhas 150-160  
-**Classe CSS Principal:** `.professors`  
-**Background:** `--neutral-0` (#FFFFFF)
-
-### Conteúdo:
-- **Título:** "Professores que confiam no Klassy"
-- **Subtítulo:** "Mais de 500 educadores já transformaram suas aulas em escolas digitais"
-- **Grid de Fotos:** Imagem 4x4 de professores
-
-### Imagens Utilizadas:
-- `professor_grid_1_1769565767622.png`
-
-### Estilos Relacionados:
-```css
-.professors
-.section-title
-.section-subtitle
-.professors-grid
-.professors-image
-```
-
-### Layout:
-- Centralizado
-- Imagem com hover scale(1.02)
-- Max-width: 900px
-
----
-
-## 8. Pricing
-
-**Localização HTML:** Linhas 162-235  
+**Localização HTML:** Linhas 134-187  
 **Classe CSS Principal:** `.pricing`  
 **Background:** `--neutral-50` (#f2f1ed)
 
@@ -260,7 +145,7 @@ Este documento mapeia todas as seções da landing page para facilitar modifica�
 - **Título:** "Planos simples e transparentes"
 - **Subtítulo:** "Escolha o plano ideal para o tamanho da sua escola"
 
-### 3 Cards de Pricing:
+### 2 Cards de Pricing:
 
 #### Card 1: Starter
 - **Preço:** R$ 97/mês
@@ -283,18 +168,7 @@ Este documento mapeia todas as seções da landing page para facilitar modifica�
   - Suporte prioritário
   - Relatórios personalizados
 - **CTA:** Botão primário "Começar Agora"
-- **Estilo:** Borda burgundy 2px
-
-#### Card 3: Mentor
-- **Preço:** R$ 397/mês
-- **Descrição:** Para escolas pequenas
-- **Features:**
-  - Tudo do Pro
-  - Múltiplos professores
-  - API de integração
-  - Suporte dedicado
-  - Onboarding personalizado
-- **CTA:** Botão outline "Falar com Vendas"
+- **Estilo:** Borda burgundy 2px, levemente maior (scale 1.05), sombra burgundy
 
 ### Estilos Relacionados:
 ```css
@@ -314,15 +188,15 @@ Este documento mapeia todas as seções da landing page para facilitar modifica�
 ```
 
 ### Layout:
-- Grid 3 colunas (desktop) / 1 coluna (mobile)
+- Grid 2 colunas (desktop) / 1 coluna (mobile)
 - Cards com bordas sutis
-- Card Pro com destaque
+- Card Pro em destaque: maior (scale 1.05), borda burgundy 2px, sombra colorida
 
 ---
 
-## 9. Final CTA
+## 5. Final CTA
 
-**Localização HTML:** Linhas 237-243  
+**Localização HTML:** Linhas 209-215  
 **Classe CSS Principal:** `.cta`  
 **Background:** `--neutral-0` (#FFFFFF)
 
@@ -344,9 +218,9 @@ Este documento mapeia todas as seções da landing page para facilitar modifica�
 
 ---
 
-## 10. Footer
+## 6. Footer
 
-**Localização HTML:** Linhas 245-291  
+**Localização HTML:** Linhas 217-263  
 **Classe CSS Principal:** `.footer`  
 **Background:** `--neutral-50` (#f2f1ed)
 
@@ -401,11 +275,9 @@ Este documento mapeia todas as seções da landing page para facilitar modifica�
 |-------|-----------|----------------|---------|
 | Nav | `#f2f1ed` | `#161616` | `#710014` |
 | Hero | `#f2f1ed` | `#161616` | `#710014` |
-| Stats | `#FFFFFF` | `#161616` | `#710014` |
 | Feature 1 | `#f2f1ed` | `#161616` | `#710014` |
 | Feature 2 | `#FFFFFF` | `#161616` | `#710014` |
 | Feature 3 | `#f2f1ed` | `#161616` | `#710014` |
-| Professors | `#FFFFFF` | `#161616` | - |
 | Pricing | `#f2f1ed` | `#161616` | `#710014` |
 | CTA | `#FFFFFF` | `#161616` | `#710014` |
 | Footer | `#f2f1ed` | `#4a4a4a` | `#710014` |
@@ -416,11 +288,9 @@ Este documento mapeia todas as seções da landing page para facilitar modifica�
 
 | Seção | Padding Desktop | Padding Mobile |
 |-------|----------------|----------------|
-| Nav | 20px | 20px |
+| Nav | 12px | 12px |
 | Hero | 120px | 80px |
-| Stats | 120px | 80px |
 | Features | 120px | 80px |
-| Professors | 120px | 80px |
 | Pricing | 120px | 80px |
 | CTA | 120px | 80px |
 | Footer | 80px top / 48px bottom | 80px top / 48px bottom |
@@ -433,11 +303,9 @@ Este documento mapeia todas as seções da landing page para facilitar modifica�
 |-------|---------|-----------|
 | Hero | `feature_mockup_1_1769565802344.png` | Dashboard desktop |
 | Hero | `feature_mockup_2_1769565819402.png` | App mobile |
-| Stats | `statistics_graph_1769565782480.png` | Gráfico de crescimento |
 | Feature 1 | `dashboard_mockup_1769564880138.png` | Dashboard financeiro |
 | Feature 2 | `mobile_app_mockup_1769564897373.png` | App de exercícios |
 | Feature 3 | `student_avatar_1769564959429.png` | Avatar e gamificação |
-| Professors | `professor_grid_1_1769565767622.png` | Grid 4x4 professores |
 
 ---
 
@@ -467,9 +335,7 @@ Este documento mapeia todas as seções da landing page para facilitar modifica�
 ### Seções Independentes:
 - ✅ Nav (não afeta outras)
 - ✅ Hero (isolado)
-- ✅ Stats (isolado)
 - ⚠️ Features (compartilham `.feature`, mas `.feature-left` e `.feature-right` são específicos)
-- ✅ Professors (isolado)
 - ✅ Pricing (isolado)
 - ✅ CTA (isolado)
 - ✅ Footer (isolado)
@@ -485,7 +351,7 @@ Este documento mapeia todas as seções da landing page para facilitar modifica�
 
 ## 📝 Notas Importantes
 
-1. **Backgrounds Alternados:** As seções alternam entre `#f2f1ed` (creme) e `#FFFFFF` (branco)
+1. **Backgrounds Alternados:** As seções alternam entre `#f2f1ed` (creme) e `#FFFFFF` (branco). Hero (creme) → Feature 1 (creme) → Feature 2 (branco) → Feature 3 (creme) → Pricing (creme) → CTA (branco) → Footer (creme)
 2. **Espaçamento Consistente:** Todas as seções principais usam 120px (desktop) / 80px (mobile)
 3. **Bordas Sutis:** Preferir `border: 1px solid rgba(0,0,0,0.08)` ao invés de sombras
 4. **Transições:** Todas as interações usam 400ms

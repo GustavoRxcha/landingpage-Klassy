@@ -23,14 +23,22 @@
     <nav class="nav">
         <div class="container">
             <div class="nav-content">
+                <!-- 1. Logo (Left) -->
                 <div class="logo">
-                    <svg class="logo-icon" viewBox="0 0 24 24" fill="currentColor">
-                        <path
-                            d="M20.57 14.86L22 13.43 20.57 12 17 15.57 8.43 7 12 3.43 10.57 2 9.14 3.43 7.71 2 5.57 4.14 4.14 2.71 2.71 4.14l1.43 1.43L2 7.71l1.43 1.43L2 10.57 3.43 12 7 8.43 15.57 17 12 20.57 13.43 22l1.43-1.43L16.29 22l2.14-2.14 1.43 1.43 1.43-1.43-1.43-1.43L22 16.29z" />
-                    </svg>
-                    <span class="logo-text">Klassy</span>
+                    <img src="assets/Images/dark_logo.svg" alt="Klassy" class="logo-image">
                 </div>
-                <button class="btn-small">Começar</button>
+
+                <!-- 2. Navigation Links (Center) -->
+                <div class="nav-links">
+                    <a href="#features">Funcionalidades</a>
+                    <a href="#about">Sobre</a>
+                    <a href="#pricing">Preços</a>
+                </div>
+
+                <!-- 3. Actions (Right) -->
+                <div class="nav-actions">
+                    <button class="btn-small">Entre em contato</button>
+                </div>
             </div>
         </div>
     </nav>
@@ -38,269 +46,443 @@
     <!-- HERO SECTION -->
     <section class="hero">
         <div class="container">
+            <!-- Left Column: Text Content -->
             <div class="hero-content">
                 <h1 class="hero-title">
-                    Transforme suas aulas particulares<br>em uma Escola Digital completa.
+                    Sua própria escola digital.
                 </h1>
                 <p class="hero-subtitle">
-                    Gestão financeira profissional e uma área do aluno que vicia em aprender.<br>
-                    Pare de usar planilhas e profissionalize seu ensino.
+                    Klassy é seu parceiro no trabalho educacional para gestão financeira, acompanhamento de alunos,
+                    e mais para que você possa focar no que faz de melhor: Ensinar.
                 </p>
-                <button class="btn-primary">Começar Agora</button>
-            </div>
-
-            <div class="hero-mockups">
-                <div class="mockup-desktop">
-                    <img src="/Users/gustavorocha/.gemini/antigravity/brain/4689f00e-8d46-4d5e-a382-66f7245d0955/feature_mockup_1_1769565802344.png"
-                        alt="Dashboard Klassy">
-                </div>
-                <div class="mockup-mobile">
-                    <img src="/Users/gustavorocha/.gemini/antigravity/brain/4689f00e-8d46-4d5e-a382-66f7245d0955/feature_mockup_2_1769565819402.png"
-                        alt="App Klassy">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- STATISTICS SECTION -->
-    <section class="stats">
-        <div class="container">
-            <div class="stats-grid">
-                <div class="stat-item">
-                    <div class="stat-number">500+</div>
-                    <div class="stat-label">Professores</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">15.000+</div>
-                    <div class="stat-label">Alunos Ativos</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">98%</div>
-                    <div class="stat-label">Taxa de Retenção</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">R$ 2M+</div>
-                    <div class="stat-label">Processado/Mês</div>
+                <div class="hero-actions">
+                    <button class="btn-primary">Começar grátis</button>
                 </div>
             </div>
 
-            <div class="stats-visual">
-                <img src="/Users/gustavorocha/.gemini/antigravity/brain/4689f00e-8d46-4d5e-a382-66f7245d0955/statistics_graph_1769565782480.png"
-                    alt="Crescimento Klassy">
-            </div>
-        </div>
-    </section>
-
-    <!-- FEATURE 1: Gestão Financeira -->
-    <section class="feature feature-left">
-        <div class="container">
-            <div class="feature-grid">
-                <div class="feature-image">
-                    <img src="/Users/gustavorocha/.gemini/antigravity/brain/4689f00e-8d46-4d5e-a382-66f7245d0955/dashboard_mockup_1769564880138.png"
-                        alt="Gestão Financeira">
+            <!-- Right Column: Visual Composition (Gamma Style) -->
+            <div class="hero-visual">
+                <!-- Secondary Card (Top Right) -->
+                <div class="visual-card card-secondary">
+                    <img src="assets/Images/professor_sala.png" alt="Professor em sala">
                 </div>
-                <div class="feature-content">
-                    <h2 class="feature-title">O fim da caixa preta financeira</h2>
-                    <p class="feature-text">
-                        Previsibilidade total. Saiba exatamente quem pagou e quanto você vai faturar no fim do mês, sem
-                        abrir uma calculadora.
-                    </p>
-                    <ul class="feature-list">
-                        <li>Controle de mensalidades automático</li>
-                        <li>Relatórios de receita em tempo real</li>
-                        <li>Previsão de faturamento mensal</li>
-                        <li>Histórico completo de pagamentos</li>
-                    </ul>
+
+                <!-- Main Card (Center) -->
+                <div class="visual-card card-main">
+                    <img src="assets/Images/macbook.png" alt="Dashboard Klassy">
+                </div>
+
+                <!-- Tertiary Card (Bottom Left) -->
+                <div class="visual-card card-tertiary">
+                    <img src="assets/Images/pessoas_andando.jpg" alt="Alunos no corredor">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- FEATURE 2: Retenção pelo Hábito -->
-    <section class="feature feature-right">
+    <!-- FEATURES CAROUSEL - SIMPLE VERSION -->
+    <section class="features-carousel" id="features" style="padding: 80px 0; background: #f2f1ed;">
         <div class="container">
-            <div class="feature-grid">
-                <div class="feature-content">
-                    <h2 class="feature-title">O diferencial que fideliza</h2>
-                    <p class="feature-text">
-                        O fim da desistência. O sistema libera 5 micro-exercícios por dia. Seu aluno cria o hábito de
-                        estudar e vê valor na mensalidade diariamente.
-                    </p>
-                    <ul class="feature-list">
-                        <li>5 exercícios liberados por dia</li>
-                        <li>Sistema de streaks e conquistas</li>
-                        <li>Feedback instantâneo de acertos</li>
-                        <li>Gamificação que vicia</li>
-                    </ul>
-                </div>
-                <div class="feature-image">
-                    <img src="/Users/gustavorocha/.gemini/antigravity/brain/4689f00e-8d46-4d5e-a382-66f7245d0955/mobile_app_mockup_1769564897373.png"
-                        alt="App do Aluno">
-                </div>
-            </div>
-        </div>
-    </section>
+            <h2 class="section-title" style="text-align: center; margin-bottom: 16px;">Todos os recursos que você
+                precisa</h2>
+            <p class="section-subtitle" style="text-align: center; margin-bottom: 48px; color: #666;">Tudo para você
+                escalar sua escola digital</p>
 
-    <!-- FEATURE 3: Profissionalismo -->
-    <section class="feature feature-left">
-        <div class="container">
-            <div class="feature-grid">
-                <div class="feature-image">
-                    <img src="/Users/gustavorocha/.gemini/antigravity/brain/4689f00e-8d46-4d5e-a382-66f7245d0955/student_avatar_1769564959429.png"
-                        alt="Experiência do Aluno">
-                </div>
-                <div class="feature-content">
-                    <h2 class="feature-title">Uma experiência de franquia</h2>
-                    <p class="feature-text">
-                        Entregue um portal com feed de notícias, perfil e gamificação. Mostre que você não é amador.
-                    </p>
-                    <ul class="feature-list">
-                        <li>Perfil personalizável com avatar</li>
-                        <li>Feed de notícias da turma</li>
-                        <li>Sistema de níveis e badges</li>
-                        <li>Área social entre alunos</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
+            <!-- Simple Carousel -->
+            <div id="carouselContainer" style="max-width: 620px; margin: 0 auto; position: relative; padding: 0 70px;">
 
-    <!-- PROFESSORS GRID -->
-    <section class="professors">
-        <div class="container">
-            <h2 class="section-title">Professores que confiam no Klassy</h2>
-            <p class="section-subtitle">Mais de 500 educadores já transformaram suas aulas em escolas digitais</p>
+                <!-- Track -->
+                <div style="overflow: hidden; border-radius: 16px;">
+                    <div id="simpleTrack" style="display: flex; transition: transform 0.5s ease;">
 
-            <div class="professors-grid">
-                <img src="/Users/gustavorocha/.gemini/antigravity/brain/4689f00e-8d46-4d5e-a382-66f7245d0955/professor_grid_1_1769565767622.png"
-                    alt="Professores Klassy" class="professors-image">
+                        <!-- Card 1 -->
+                        <div style="min-width: 100%; padding: 0;">
+                            <div
+                                style="background: white; border-radius: 16px; padding: 40px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); text-align: center; min-height: 450px;">
+                                <div
+                                    style="width: 64px; height: 64px; margin: 0 auto 24px; background: #f2f1ed; border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+                                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#710014"
+                                        stroke-width="2">
+                                        <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                                    </svg>
+                                </div>
+                                <h3 style="font-size: 22px; font-weight: 700; margin-bottom: 16px; color: #1a1a1a;">
+                                    Gestão
+                                    Financeira Completa</h3>
+                                <p style="font-size: 15px; line-height: 1.6; color: #666; margin-bottom: 24px;">Chega de
+                                    planilhas. Automatize mensalidades, controle inadimplência e tenha previsão de
+                                    caixa.
+                                </p>
+                                <ul style="list-style: none; padding: 0; text-align: left;">
+                                    <li
+                                        style="padding-left: 24px; margin-bottom: 12px; position: relative; color: #333;">
+                                        <span
+                                            style="position: absolute; left: 0; color: #710014; font-weight: 700;">✓</span>
+                                        Cobrança automática
+                                    </li>
+                                    <li
+                                        style="padding-left: 24px; margin-bottom: 12px; position: relative; color: #333;">
+                                        <span
+                                            style="position: absolute; left: 0; color: #710014; font-weight: 700;">✓</span>
+                                        Relatórios em tempo real
+                                    </li>
+                                    <li
+                                        style="padding-left: 24px; margin-bottom: 12px; position: relative; color: #333;">
+                                        <span
+                                            style="position: absolute; left: 0; color: #710014; font-weight: 700;">✓</span>
+                                        Previsão de faturamento
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div style="min-width: 100%; padding: 0;">
+                            <div
+                                style="background: white; border-radius: 16px; padding: 40px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); text-align: center; min-height: 450px;">
+                                <div
+                                    style="width: 64px; height: 64px; margin: 0 auto 24px; background: #f2f1ed; border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+                                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#710014"
+                                        stroke-width="2">
+                                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                                        <polyline points="22 4 12 14.01 9 11.01" />
+                                    </svg>
+                                </div>
+                                <h3 style="font-size: 22px; font-weight: 700; margin-bottom: 16px; color: #1a1a1a;">
+                                    Retenção
+                                    pelo Hábito</h3>
+                                <p style="font-size: 15px; line-height: 1.6; color: #666; margin-bottom: 24px;">O
+                                    sistema
+                                    libera 5 micro-exercícios por dia. Seu aluno cria o hábito de estudar diariamente.
+                                </p>
+                                <ul style="list-style: none; padding: 0; text-align: left;">
+                                    <li
+                                        style="padding-left: 24px; margin-bottom: 12px; position: relative; color: #333;">
+                                        <span
+                                            style="position: absolute; left: 0; color: #710014; font-weight: 700;">✓</span>
+                                        5 exercícios/dia
+                                    </li>
+                                    <li
+                                        style="padding-left: 24px; margin-bottom: 12px; position: relative; color: #333;">
+                                        <span
+                                            style="position: absolute; left: 0; color: #710014; font-weight: 700;">✓</span>
+                                        Sistema de streaks
+                                    </li>
+                                    <li
+                                        style="padding-left: 24px; margin-bottom: 12px; position: relative; color: #333;">
+                                        <span
+                                            style="position: absolute; left: 0; color: #710014; font-weight: 700;">✓</span>
+                                        Gamificação viciante
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div style="min-width: 100%; padding: 0;">
+                            <div
+                                style="background: white; border-radius: 16px; padding: 40px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); text-align: center; min-height: 450px;">
+                                <div
+                                    style="width: 64px; height: 64px; margin: 0 auto 24px; background: #f2f1ed; border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+                                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#710014"
+                                        stroke-width="2">
+                                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                                        <circle cx="9" cy="7" r="4" />
+                                        <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                                        <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                                    </svg>
+                                </div>
+                                <h3 style="font-size: 22px; font-weight: 700; margin-bottom: 16px; color: #1a1a1a;">
+                                    Portal
+                                    do Aluno Premium</h3>
+                                <p style="font-size: 15px; line-height: 1.6; color: #666; margin-bottom: 24px;">Entregue
+                                    um
+                                    portal com feed de notícias, perfil e gamificação. Elevando o nível da sua escola.
+                                </p>
+                                <ul style="list-style: none; padding: 0; text-align: left;">
+                                    <li
+                                        style="padding-left: 24px; margin-bottom: 12px; position: relative; color: #333;">
+                                        <span
+                                            style="position: absolute; left: 0; color: #710014; font-weight: 700;">✓</span>
+                                        Perfil customizável
+                                    </li>
+                                    <li
+                                        style="padding-left: 24px; margin-bottom: 12px; position: relative; color: #333;">
+                                        <span
+                                            style="position: absolute; left: 0; color: #710014; font-weight: 700;">✓</span>
+                                        Feed da turma
+                                    </li>
+                                    <li
+                                        style="padding-left: 24px; margin-bottom: 12px; position: relative; color: #333;">
+                                        <span
+                                            style="position: absolute; left: 0; color: #710014; font-weight: 700;">✓</span>
+                                        Badges e Conquistas
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Card 4 -->
+                        <div style="min-width: 100%; padding: 0;">
+                            <div
+                                style="background: white; border-radius: 16px; padding: 40px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); text-align: center; min-height: 450px;">
+                                <div
+                                    style="width: 64px; height: 64px; margin: 0 auto 24px; background: #f2f1ed; border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+                                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#710014"
+                                        stroke-width="2">
+                                        <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+                                        <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+                                    </svg>
+                                </div>
+                                <h3 style="font-size: 22px; font-weight: 700; margin-bottom: 16px; color: #1a1a1a;">
+                                    Acompanhamento Pedagógico</h3>
+                                <p style="font-size: 15px; line-height: 1.6; color: #666; margin-bottom: 24px;">Saiba
+                                    exatamente onde seus alunos estão com dificuldades e atue de forma cirúrgica.</p>
+                                <ul style="list-style: none; padding: 0; text-align: left;">
+                                    <li
+                                        style="padding-left: 24px; margin-bottom: 12px; position: relative; color: #333;">
+                                        <span
+                                            style="position: absolute; left: 0; color: #710014; font-weight: 700;">✓</span>
+                                        Dashboard de desempenho
+                                    </li>
+                                    <li
+                                        style="padding-left: 24px; margin-bottom: 12px; position: relative; color: #333;">
+                                        <span
+                                            style="position: absolute; left: 0; color: #710014; font-weight: 700;">✓</span>
+                                        Alertas de evasão
+                                    </li>
+                                    <li
+                                        style="padding-left: 24px; margin-bottom: 12px; position: relative; color: #333;">
+                                        <span
+                                            style="position: absolute; left: 0; color: #710014; font-weight: 700;">✓</span>
+                                        Feedback individual
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Arrows -->
+                    <button id="simplePrev"
+                        style="position: absolute; left: 5px; top: 50%; transform: translateY(-50%); width: 48px; height: 48px; border-radius: 50%; border: 2px solid #710014; background: white; cursor: pointer; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 8px rgba(0,0,0,0.15); z-index: 10; transition: all 0.3s;">
+                        <svg id="prevIcon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#710014"
+                            stroke-width="2">
+                            <polyline points="15 18 9 12 15 6" />
+                        </svg>
+                    </button>
+                    <button id="simpleNext"
+                        style="position: absolute; right: 5px; top: 50%; transform: translateY(-50%); width: 48px; height: 48px; border-radius: 50%; border: 2px solid #710014; background: white; cursor: pointer; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 8px rgba(0,0,0,0.15); z-index: 10; transition: all 0.3s;">
+                        <svg id="nextIcon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#710014"
+                            stroke-width="2">
+                            <polyline points="9 18 15 12 9 6" />
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Dots -->
+                <div id="simpleDots" style="display: flex; justify-content: center; gap: 8px; margin-top: 32px;"></div>
             </div>
-        </div>
     </section>
 
     <!-- PRICING -->
-    <section class="pricing">
+    <section class="pricing" style="background: linear-gradient(135deg, #710014 0%, #5a0010 100%); padding: 80px 0;">
         <div class="container">
-            <h2 class="section-title">Planos simples e transparentes</h2>
-            <p class="section-subtitle">Escolha o plano ideal para o tamanho da sua escola</p>
+            <h2 class="section-title" style="text-align: center; margin-bottom: 16px; color: #FFFFFF;">Planos simples e
+                transparentes</h2>
+            <p class="section-subtitle"
+                style="text-align: center; margin-bottom: 64px; color: rgba(255, 255, 255, 0.9); font-size: 18px;">
+                Escolha o plano ideal para o tamanho da sua escola</p>
 
-            <div class="pricing-grid">
+            <div class="pricing-grid"
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px; max-width: 900px; margin: 0 auto;">
                 <!-- Starter -->
-                <div class="pricing-card">
-                    <div class="pricing-header">
-                        <h3 class="pricing-name">Starter</h3>
-                        <p class="pricing-desc">Para quem está começando</p>
+                <div class="pricing-card"
+                    style="background: #FFFFFF; border-radius: 16px; padding: 40px; box-shadow: 0 8px 24px rgba(113, 0, 20, 0.25); display: flex; flex-direction: column; transition: transform 0.3s, box-shadow 0.3s;">
+                    <div class="pricing-header" style="margin-bottom: 24px;">
+                        <h3 class="pricing-name"
+                            style="font-size: 24px; font-weight: 700; color: #161616; margin-bottom: 8px;">Starter</h3>
+                        <p class="pricing-desc" style="font-size: 15px; color: #666;">Para quem está começando</p>
                     </div>
-                    <div class="pricing-price">
-                        <span class="price-currency">R$</span>
-                        <span class="price-value">97</span>
-                        <span class="price-period">/mês</span>
+                    <div class="pricing-price" style="margin-bottom: 32px;">
+                        <span class="price-currency"
+                            style="font-size: 24px; color: #710014; font-weight: 700; vertical-align: top;">R$</span>
+                        <span class="price-value"
+                            style="font-size: 56px; font-weight: 700; color: #710014; line-height: 1;">97</span>
+                        <span class="price-period" style="font-size: 18px; color: #666;">/mês</span>
                     </div>
-                    <ul class="pricing-features">
-                        <li>Até 15 alunos</li>
-                        <li>Gestão financeira básica</li>
-                        <li>Exercícios ilimitados</li>
-                        <li>Suporte por email</li>
+                    <ul class="pricing-features"
+                        style="list-style: none; padding: 0; margin: 0 0 32px 0; flex-grow: 1;">
+                        <li
+                            style="padding-left: 28px; margin-bottom: 16px; position: relative; color: #333; font-size: 15px;">
+                            <span
+                                style="position: absolute; left: 0; color: #710014; font-weight: 700; font-size: 18px;">✓</span>
+                            Até 15 alunos
+                        </li>
+                        <li
+                            style="padding-left: 28px; margin-bottom: 16px; position: relative; color: #333; font-size: 15px;">
+                            <span
+                                style="position: absolute; left: 0; color: #710014; font-weight: 700; font-size: 18px;">✓</span>
+                            Gestão financeira básica
+                        </li>
+                        <li
+                            style="padding-left: 28px; margin-bottom: 16px; position: relative; color: #333; font-size: 15px;">
+                            <span
+                                style="position: absolute; left: 0; color: #710014; font-weight: 700; font-size: 18px;">✓</span>
+                            Exercícios ilimitados
+                        </li>
+                        <li
+                            style="padding-left: 28px; margin-bottom: 16px; position: relative; color: #333; font-size: 15px;">
+                            <span
+                                style="position: absolute; left: 0; color: #710014; font-weight: 700; font-size: 18px;">✓</span>
+                            Suporte por email
+                        </li>
                     </ul>
-                    <button class="btn-outline">Começar</button>
+                    <button class="btn-outline"
+                        style="width: 100%; padding: 16px 32px; border: 2px solid #710014; background: transparent; color: #710014; font-size: 16px; font-weight: 600; border-radius: 12px; cursor: pointer; transition: all 0.3s;"
+                        onmouseover="this.style.background='#710014'; this.style.color='#FFFFFF';"
+                        onmouseout="this.style.background='transparent'; this.style.color='#710014';">Começar</button>
                 </div>
 
                 <!-- Pro (Destaque) -->
-                <div class="pricing-card pricing-featured">
-                    <div class="pricing-badge">Mais Popular</div>
-                    <div class="pricing-header">
-                        <h3 class="pricing-name">Pro</h3>
-                        <p class="pricing-desc">Para professores em crescimento</p>
+                <div class="pricing-card pricing-featured"
+                    style="background: #FFFFFF; border-radius: 16px; padding: 40px; box-shadow: 0 12px 32px rgba(113, 0, 20, 0.35); display: flex; flex-direction: column; transform: scale(1.05); border: 2px solid #710014; position: relative;">
+                    <div class="pricing-badge"
+                        style="position: absolute; top: -16px; left: 50%; transform: translateX(-50%); background: #710014; color: #FFFFFF; padding: 8px 24px; border-radius: 9999px; font-size: 13px; font-weight: 600; letter-spacing: 0.05em; box-shadow: 0 4px 12px rgba(113, 0, 20, 0.3); border: 2px solid #FFFFFF;">
+                        Mais Popular</div>
+                    <div class="pricing-header" style="margin-bottom: 24px; margin-top: 16px;">
+                        <h3 class="pricing-name"
+                            style="font-size: 24px; font-weight: 700; color: #161616; margin-bottom: 8px;">Pro</h3>
+                        <p class="pricing-desc" style="font-size: 15px; color: #666;">Para professores em crescimento
+                        </p>
                     </div>
-                    <div class="pricing-price">
-                        <span class="price-currency">R$</span>
-                        <span class="price-value">197</span>
-                        <span class="price-period">/mês</span>
+                    <div class="pricing-price" style="margin-bottom: 32px;">
+                        <span class="price-currency"
+                            style="font-size: 24px; color: #710014; font-weight: 700; vertical-align: top;">R$</span>
+                        <span class="price-value"
+                            style="font-size: 56px; font-weight: 700; color: #710014; line-height: 1;">197</span>
+                        <span class="price-period" style="font-size: 18px; color: #666;">/mês</span>
                     </div>
-                    <ul class="pricing-features">
-                        <li>Alunos ilimitados</li>
-                        <li>Financeiro completo</li>
-                        <li>Gamificação avançada</li>
-                        <li>Suporte prioritário</li>
-                        <li>Relatórios personalizados</li>
+                    <ul class="pricing-features"
+                        style="list-style: none; padding: 0; margin: 0 0 32px 0; flex-grow: 1;">
+                        <li
+                            style="padding-left: 28px; margin-bottom: 16px; position: relative; color: #333; font-size: 15px;">
+                            <span
+                                style="position: absolute; left: 0; color: #710014; font-weight: 700; font-size: 18px;">✓</span>
+                            Alunos ilimitados
+                        </li>
+                        <li
+                            style="padding-left: 28px; margin-bottom: 16px; position: relative; color: #333; font-size: 15px;">
+                            <span
+                                style="position: absolute; left: 0; color: #710014; font-weight: 700; font-size: 18px;">✓</span>
+                            Financeiro completo
+                        </li>
+                        <li
+                            style="padding-left: 28px; margin-bottom: 16px; position: relative; color: #333; font-size: 15px;">
+                            <span
+                                style="position: absolute; left: 0; color: #710014; font-weight: 700; font-size: 18px;">✓</span>
+                            Gamificação avançada
+                        </li>
+                        <li
+                            style="padding-left: 28px; margin-bottom: 16px; position: relative; color: #333; font-size: 15px;">
+                            <span
+                                style="position: absolute; left: 0; color: #710014; font-weight: 700; font-size: 18px;">✓</span>
+                            Suporte prioritário
+                        </li>
+                        <li
+                            style="padding-left: 28px; margin-bottom: 16px; position: relative; color: #333; font-size: 15px;">
+                            <span
+                                style="position: absolute; left: 0; color: #710014; font-weight: 700; font-size: 18px;">✓</span>
+                            Relatórios personalizados
+                        </li>
                     </ul>
-                    <button class="btn-primary">Começar Agora</button>
-                </div>
-
-                <!-- Mentor -->
-                <div class="pricing-card">
-                    <div class="pricing-header">
-                        <h3 class="pricing-name">Mentor</h3>
-                        <p class="pricing-desc">Para escolas pequenas</p>
-                    </div>
-                    <div class="pricing-price">
-                        <span class="price-currency">R$</span>
-                        <span class="price-value">397</span>
-                        <span class="price-period">/mês</span>
-                    </div>
-                    <ul class="pricing-features">
-                        <li>Tudo do Pro</li>
-                        <li>Múltiplos professores</li>
-                        <li>API de integração</li>
-                        <li>Suporte dedicado</li>
-                        <li>Onboarding personalizado</li>
-                    </ul>
-                    <button class="btn-outline">Falar com Vendas</button>
+                    <button class="btn-primary"
+                        style="width: 100%; padding: 16px 32px; border: none; background: #710014; color: #FFFFFF; font-size: 16px; font-weight: 600; border-radius: 12px; cursor: pointer; transition: all 0.3s; box-shadow: 0 4px 12px rgba(113, 0, 20, 0.2);"
+                        onmouseover="this.style.background='#8a0018'; this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 16px rgba(113, 0, 20, 0.3)';"
+                        onmouseout="this.style.background='#710014'; this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 12px rgba(113, 0, 20, 0.2)';">Começar
+                        Agora</button>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- FINAL CTA -->
-    <section class="cta">
-        <div class="container">
-            <h2 class="cta-title">Sua escola digital está a um clique de distância.</h2>
-            <button class="btn-primary btn-large">Criar minha conta Klassy</button>
+    <section class="cta" style="padding: 60px 0 180px 0;">
+        <div class="container" style="text-align: center;">
+            <h2 class="cta-title"
+                style="font-size: 56px; max-width: 900px; margin: 0 auto 56px auto; text-align: center;">Sua escola
+                digital está aqui<br>entre em contato.</h2>
+            <div style="display: flex; gap: 32px; justify-content: center; align-items: center; flex-wrap: wrap;">
+                <!-- WhatsApp Button -->
+                <a href="https://wa.me/5511999999999" target="_blank" rel="noopener noreferrer"
+                    style="display: inline-flex; align-items: center; justify-content: center; gap: 14px; padding: 20px 40px; width: 280px; background: #710014; color: #FFFFFF; font-size: 18px; font-weight: 600; border-radius: 12px; text-decoration: none; transition: all 0.3s; box-shadow: 0 4px 12px rgba(113, 0, 20, 0.3);"
+                    onmouseover="this.style.background='#8a0018'; this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 16px rgba(113, 0, 20, 0.4)';"
+                    onmouseout="this.style.background='#710014'; this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 12px rgba(113, 0, 20, 0.3)';">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path
+                            d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+                    </svg>
+                    Nosso WhatsApp
+                </a>
+
+                <!-- ExecFlow Button -->
+                <a href="https://execflow.com" target="_blank" rel="noopener noreferrer"
+                    style="display: inline-flex; align-items: center; justify-content: center; gap: 14px; padding: 20px 40px; width: 280px; background: #710014; color: #FFFFFF; font-size: 18px; font-weight: 600; border-radius: 12px; text-decoration: none; transition: all 0.3s; box-shadow: 0 4px 12px rgba(113, 0, 20, 0.3);"
+                    onmouseover="this.style.background='#8a0018'; this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 16px rgba(113, 0, 20, 0.4)';"
+                    onmouseout="this.style.background='#710014'; this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 12px rgba(113, 0, 20, 0.3)';">
+                    <img src="assets/Images/Logo-execflow-sem-fundo.png" alt="ExecFlow"
+                        style="height: 28px; width: auto;">
+                </a>
+            </div>
         </div>
     </section>
 
     <!-- FOOTER -->
-    <footer class="footer">
+    <footer class="footer"
+        style="position: fixed; bottom: 0; left: 0; width: 100%; z-index: 1000; transform: translateY(100%); box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.3); background: #710014;">
         <div class="container">
-            <div class="footer-content">
+            <div class="footer-content"
+                style="display: grid; grid-template-columns: 2fr 1fr; gap: 48px; margin-bottom: 32px;">
                 <div class="footer-brand">
                     <div class="logo">
-                        <svg class="logo-icon" viewBox="0 0 24 24" fill="currentColor">
-                            <path
-                                d="M20.57 14.86L22 13.43 20.57 12 17 15.57 8.43 7 12 3.43 10.57 2 9.14 3.43 7.71 2 5.57 4.14 4.14 2.71 2.71 4.14l1.43 1.43L2 7.71l1.43 1.43L2 10.57 3.43 12 7 8.43 15.57 17 12 20.57 13.43 22l1.43-1.43L16.29 22l2.14-2.14 1.43 1.43 1.43-1.43-1.43-1.43L22 16.29z" />
-                        </svg>
-                        <span class="logo-text">Klassy</span>
+                        <img src="assets/Images/light_logo.svg" alt="Klassy" style="height: 48px; width: auto;">
                     </div>
-                    <p class="footer-tagline">Transformando professores em donos de escolas digitais.</p>
+                    <p class="footer-tagline" style="color: rgba(255, 255, 255, 0.8); margin-top: 16px;">Transformando
+                        professores em donos de escolas digitais.</p>
                 </div>
 
-                <div class="footer-links">
+                <div class="footer-links" style="display: flex; gap: 48px;">
                     <div class="footer-column">
-                        <h4>Produto</h4>
-                        <a href="#">Funcionalidades</a>
-                        <a href="#">Preços</a>
-                        <a href="#">Casos de Uso</a>
-                    </div>
-                    <div class="footer-column">
-                        <h4>Empresa</h4>
-                        <a href="#">Sobre</a>
-                        <a href="#">Blog</a>
-                        <a href="#">Carreiras</a>
-                    </div>
-                    <div class="footer-column">
-                        <h4>Suporte</h4>
-                        <a href="#">Central de Ajuda</a>
-                        <a href="#">Contato</a>
-                        <a href="#">Status</a>
+                        <h4 style="color: #FFFFFF; font-size: 16px; font-weight: 600; margin-bottom: 16px;">Produto</h4>
+                        <a href="#"
+                            style="display: block; color: rgba(255, 255, 255, 0.8); text-decoration: none; margin-bottom: 12px; transition: color 0.3s;"
+                            onmouseover="this.style.color='#FFFFFF'"
+                            onmouseout="this.style.color='rgba(255, 255, 255, 0.8)'">Funcionalidades</a>
+                        <a href="#"
+                            style="display: block; color: rgba(255, 255, 255, 0.8); text-decoration: none; margin-bottom: 12px; transition: color 0.3s;"
+                            onmouseover="this.style.color='#FFFFFF'"
+                            onmouseout="this.style.color='rgba(255, 255, 255, 0.8)'">Preços</a>
+                        <a href="#"
+                            style="display: block; color: rgba(255, 255, 255, 0.8); text-decoration: none; margin-bottom: 12px; transition: color 0.3s;"
+                            onmouseover="this.style.color='#FFFFFF'"
+                            onmouseout="this.style.color='rgba(255, 255, 255, 0.8)'">Casos de Uso</a>
                     </div>
                 </div>
             </div>
 
-            <div class="footer-bottom">
-                <p>&copy; 2026 Klassy. Todos os direitos reservados.</p>
+            <div class="footer-bottom"
+                style="display: flex; justify-content: space-between; align-items: center; padding-top: 24px; border-top: 1px solid rgba(255, 255, 255, 0.2);">
+                <p style="color: rgba(255, 255, 255, 0.8); margin: 0;">&copy; 2026 Klassy. Todos os direitos reservados.
+                </p>
                 <div class="footer-legal">
-                    <a href="#">Privacidade</a>
-                    <a href="#">Termos</a>
+                    <p style="color: rgba(255, 255, 255, 0.8); margin: 0;">
+                        Desenvolvido por
+                        <a href="https://www.execflow.com.br" target="_blank" rel="noopener noreferrer"
+                            style="color: rgba(255, 255, 255, 0.8); text-decoration: none; font-weight: 600; transition: color 0.3s;"
+                            onmouseover="this.style.color='#00FF00'"
+                            onmouseout="this.style.color='rgba(255, 255, 255, 0.8)'">ExecFlow</a>
+                    </p>
                 </div>
             </div>
         </div>
@@ -334,12 +516,217 @@
             });
         }, observerOptions);
 
-        document.querySelectorAll('.feature, .stat-item, .pricing-card').forEach(el => {
+        document.querySelectorAll('.feature, .pricing-card').forEach(el => {
             el.style.opacity = '0';
             el.style.transform = 'translateY(20px)';
             el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
             observer.observe(el);
         });
+
+        // ===== SIMPLE CAROUSEL =====
+        const simpleTrack = document.getElementById('simpleTrack');
+        const simplePrev = document.getElementById('simplePrev');
+        const simpleNext = document.getElementById('simpleNext');
+        const simpleDots = document.getElementById('simpleDots');
+
+        if (simpleTrack) {
+            let currentSlide = 0;
+            const totalSlides = 4;
+            let autoTimer;
+
+            // Create dots
+            for (let i = 0; i < totalSlides; i++) {
+                const dot = document.createElement('button');
+                dot.style.cssText = 'width: 8px; height: 8px; border-radius: 50%; border: none; background: #ccc; cursor: pointer; padding: 0; transition: all 0.3s;';
+                if (i === 0) dot.style.background = '#710014';
+                dot.onclick = () => goTo(i);
+                simpleDots.appendChild(dot);
+            }
+
+            const dots = simpleDots.children;
+
+            function update() {
+                simpleTrack.style.transform = `translateX(-${currentSlide * 100}%)`;
+                for (let i = 0; i < dots.length; i++) {
+                    dots[i].style.background = i === currentSlide ? '#710014' : '#ccc';
+                    dots[i].style.width = i === currentSlide ? '24px' : '8px';
+                    dots[i].style.borderRadius = i === currentSlide ? '4px' : '50%';
+                }
+            }
+
+            function goTo(index) {
+                currentSlide = index;
+                update();
+                resetTimer();
+            }
+
+            function next() {
+                currentSlide = (currentSlide + 1) % totalSlides;
+                update();
+            }
+
+            function prev() {
+                currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+                update();
+            }
+
+            function startAuto() {
+                autoTimer = setInterval(next, 5000);
+            }
+
+            function stopAuto() {
+                clearInterval(autoTimer);
+            }
+
+            function resetTimer() {
+                stopAuto();
+                startAuto();
+            }
+
+            const prevIcon = document.getElementById('prevIcon');
+            const nextIcon = document.getElementById('nextIcon');
+
+            if (simplePrev) {
+                simplePrev.onclick = () => { prev(); resetTimer(); };
+                simplePrev.onmouseenter = () => {
+                    simplePrev.style.background = '#710014';
+                    if (prevIcon) prevIcon.setAttribute('stroke', 'white');
+                };
+                simplePrev.onmouseleave = () => {
+                    simplePrev.style.background = 'white';
+                    if (prevIcon) prevIcon.setAttribute('stroke', '#710014');
+                };
+            }
+            if (simpleNext) {
+                simpleNext.onclick = () => { next(); resetTimer(); };
+                simpleNext.onmouseenter = () => {
+                    simpleNext.style.background = '#710014';
+                    if (nextIcon) nextIcon.setAttribute('stroke', 'white');
+                };
+                simpleNext.onmouseleave = () => {
+                    simpleNext.style.background = 'white';
+                    if (nextIcon) nextIcon.setAttribute('stroke', '#710014');
+                };
+            }
+
+            simpleTrack.onmouseenter = stopAuto;
+            simpleTrack.onmouseleave = startAuto;
+
+            // Touch Swipe Support
+            let touchStartX = 0;
+            let touchEndX = 0;
+
+            simpleTrack.addEventListener('touchstart', (e) => {
+                touchStartX = e.changedTouches[0].screenX;
+                stopAuto();
+            }, { passive: true });
+
+            simpleTrack.addEventListener('touchend', (e) => {
+                touchEndX = e.changedTouches[0].screenX;
+                handleSwipe();
+                startAuto();
+            }, { passive: true });
+
+            function handleSwipe() {
+                const swipeThreshold = 50; // mínimo de 50px para considerar swipe
+                const diff = touchStartX - touchEndX;
+
+                if (Math.abs(diff) > swipeThreshold) {
+                    if (diff > 0) {
+                        // Swipe left - próximo
+                        next();
+                    } else {
+                        // Swipe right - anterior
+                        prev();
+                    }
+                }
+            }
+
+            startAuto();
+        }
+
+        // ===== FOOTER SCROLLYTELLING EFFECT =====
+        const footer = document.querySelector('.footer');
+
+        if (footer) {
+            let footerProgress = 0; // 0 a 100
+            let isScrollytelling = false;
+            let scrollytellingStarted = false;
+
+            function updateFooter() {
+                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                const windowHeight = window.innerHeight;
+                const documentHeight = document.documentElement.scrollHeight;
+                const distanceFromBottom = documentHeight - (scrollTop + windowHeight);
+
+                // Ativa scrollytelling quando chega ao final exato da página
+                if (distanceFromBottom <= 0 && !scrollytellingStarted) {
+                    isScrollytelling = true;
+                    scrollytellingStarted = true;
+                }
+
+                // Desativa scrollytelling se usuário rolou para longe do final E footer está escondido
+                if (distanceFromBottom > 50 && footerProgress === 0) {
+                    isScrollytelling = false;
+                    scrollytellingStarted = false;
+                }
+
+                // Se ainda não chegou ao final, footer fica escondido
+                if (!isScrollytelling) {
+                    footer.style.transform = 'translateY(100%)';
+                    return;
+                }
+
+                // Aplica transform baseado no progresso
+                const translateY = 100 - footerProgress;
+                footer.style.transform = `translateY(${translateY}%)`;
+            }
+
+            // Controla scroll com wheel (scrollytelling)
+            window.addEventListener('wheel', (e) => {
+                if (!isScrollytelling) return;
+
+                // Trava scroll enquanto footer estiver visível (progress > 0)
+                if (footerProgress > 0) {
+                    e.preventDefault();
+                }
+
+                // Scroll para baixo aumenta progresso
+                if (e.deltaY > 0 && footerProgress < 100) {
+                    footerProgress += 20; // 5 movimentos para revelar
+                    footerProgress = Math.min(100, footerProgress);
+                }
+                // Scroll para cima diminui progresso
+                else if (e.deltaY < 0 && footerProgress > 0) {
+                    footerProgress -= 100; // Esconde instantaneamente
+                    footerProgress = Math.max(0, footerProgress);
+
+                    // Se voltar a 0, permite scroll normal novamente
+                    if (footerProgress === 0) {
+                        isScrollytelling = false;
+                        scrollytellingStarted = false;
+                    }
+                }
+
+                updateFooter();
+            }, { passive: false });
+
+            // Monitora scroll normal
+            let ticking = false;
+            window.addEventListener('scroll', () => {
+                if (!ticking) {
+                    window.requestAnimationFrame(() => {
+                        updateFooter();
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            }, { passive: true });
+
+            // Inicializa
+            updateFooter();
+        }
+
     </script>
 
 </body>
