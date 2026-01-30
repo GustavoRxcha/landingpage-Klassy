@@ -177,7 +177,7 @@ ul {
   padding: 14px 32px;
   background: var(--primary-900);
   color: var(--neutral-0);
-  font-size: 15px;
+  font-size: 20px;
   font-weight: 500;
   border-radius: var(--radius-sm);
   transition: all var(--duration-normal) ease;
@@ -257,6 +257,17 @@ ul {
   color: var(--neutral-900);
   margin-bottom: var(--space-4);
 }
+
+.hero-title .highlight {
+  background: var(--primary-900);
+  color: var(--neutral-0);
+  padding: 3px 12px;
+  border-radius: 4px;
+  display: inline-block;
+  position: relative;
+  box-shadow: 0 2px 8px rgba(113, 0, 20, 0.2);
+}
+
 
 .hero-subtitle {
   font-family: var(--font-body);
