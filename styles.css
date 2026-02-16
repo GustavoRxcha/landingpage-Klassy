@@ -710,7 +710,7 @@ ul {
   z-index: 1000;
   background: var(--neutral-50);
   border-top: var(--border-subtle);
-  padding: 180px 0 100px 0;
+  padding: 128px 0 100px 0;
   transform: translateY(100%);
   box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1);
 }
