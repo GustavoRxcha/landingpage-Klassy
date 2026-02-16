@@ -699,7 +699,7 @@ ul {
   z-index: 1000;
   background: var(--neutral-50);
   border-top: var(--border-subtle);
-  padding: var(--space-large) 0 var(--space-medium) 0;
+  padding: 180px 0 100px 0;
   transform: translateY(100%);
   box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1);
 }
@@ -805,25 +805,131 @@ a {
   transition-property: all;
 }
 
-/* === MOBILE CAROUSEL FIX === */
+/* === FEATURES SECTION (NEW) === */
+.features-section {
+  padding: 80px 0;
+  background: var(--neutral-50);
+}
+
+.feature-block {
+  margin-bottom: 80px;
+}
+
+.feature-block:last-child {
+  margin-bottom: 0;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+
+/* Feature Image */
+.feature-image {
+  width: 100%;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--neutral-100);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.feature-image img,
+.placeholder-image {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+}
+
+/* Feature Content */
+.feature-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.feature-title {
+  font-family: var(--font-display);
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  color: var(--neutral-900);
+  margin: 0;
+}
+
+.feature-description {
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.65;
+  color: var(--neutral-700);
+  margin: 0;
+}
+
+/* Layout Alternado */
+/* Feature Left: Imagem à esquerda, texto à direita (padrão) */
+.feature-left .feature-grid {
+  grid-template-columns: 1fr 1fr;
+}
+
+/* Feature Right: Texto à esquerda, imagem à direita */
+.feature-right .feature-grid {
+  grid-template-columns: 1fr 1fr;
+}
+
+.feature-right .feature-content {
+  order: 1;
+}
+
+.feature-right .feature-image {
+  order: 2;
+}
+
+/* Responsividade */
+@media (max-width: 968px) {
+  .features-section {
+    padding: 60px 0;
+  }
+
+  .feature-block {
+    margin-bottom: 60px;
+  }
+
+  .feature-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  /* No mobile, sempre imagem no topo */
+  .feature-right .feature-content {
+    order: 2;
+  }
+
+  .feature-right .feature-image {
+    order: 1;
+  }
+
+  .feature-title {
+    font-size: 32px;
+  }
+
+  .feature-description {
+    font-size: 16px;
+  }
+}
+
 @media (max-width: 768px) {
-
-  /* Remove padding do container no mobile */
-  #carouselContainer {
-    padding: 0 20px !important;
-    max-width: 100% !important;
+  .features-section {
+    padding: 48px 0;
   }
 
-  /* Esconde setas no mobile - usa touch/swipe */
-  #simplePrev,
-  #simpleNext {
-    display: none !important;
+  .feature-block {
+    margin-bottom: 48px;
   }
 
-  /* Ajusta ícones das setas */
-  #prevIcon,
-  #nextIcon {
-    width: 20px !important;
-    height: 20px !important;
+  .feature-title {
+    font-size: 28px;
   }
 }
