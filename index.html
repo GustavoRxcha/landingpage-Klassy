@@ -11,7 +11,9 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
@@ -42,39 +44,39 @@
         </div>
     </nav>
 
-    <!-- HERO SECTION -->
+    <!-- HERO SECTION - REDESIGN -->
     <section class="hero">
-        <div class="container">
-            <!-- Left Column: Text Content -->
-            <div class="hero-content">
-                <h1 class="hero-title">
-                    Sua própria escola <span class="highlight">digital.</span>
-                </h1>
-                <p class="hero-subtitle">
-                    Klassy é seu parceiro no trabalho educacional para gestão financeira, acompanhamento de alunos,
-                    e mais para que você possa focar no que faz de melhor: Ensinar.
-                </p>
-                <div class="hero-actions">
-                    <button class="btn-primary">Começar grátis</button>
-                </div>
-            </div>
+        <!-- Background Image Layer -->
+        <div class="hero-background">
+            <img src="assets/images/hero_background.jpeg" alt="Professora com alunos em sala de aula" loading="eager">
+            <div class="hero-overlay"></div>
+        </div>
 
-            <!-- Right Column: Visual Composition (Gamma Style) -->
-            <div class="hero-visual">
-                <!-- Secondary Card (Top Right) -->
-                <div class="visual-card card-secondary">
-                    <img src="assets/Images/professor_sala.png" alt="Professor em sala">
-                </div>
+        <!-- Text Content Overlay (Left Side) -->
+        <div class="hero-content">
+            <h1 class="hero-title">Construa o Futuro da Educação.</h1>
+            <h2 class="hero-subtitle-main">Comece Agora.</h2>
+            <p class="hero-description">
+                Klassy é seu parceiro no trabalho educacional para gestão financeira, acompanhamento de alunos,
+                e mais por você.
+            </p>
+            <button class="hero-cta-button">Explore o Potencial</button>
+        </div>
 
-                <!-- Main Card (Center) -->
-                <div class="visual-card card-main">
-                    <img src="assets/Images/macbook.png" alt="Dashboard Klassy">
-                </div>
+        <!-- Floating Video Card (50% inside / 50% outside) -->
+        <div class="video-card" role="button" tabindex="0" aria-label="Assistir tour virtual da escola">
+            <div class="video-thumbnail">
+                <!-- Placeholder for video thumbnail - replace with actual image -->
+                <img src="assets/images/macbook.png" alt="Tour virtual da plataforma Klassy" loading="lazy">
+                <div class="video-overlay"></div>
 
-                <!-- Tertiary Card (Bottom Left) -->
-                <div class="visual-card card-tertiary">
-                    <img src="assets/Images/pessoas_andando.jpg" alt="Alunos no corredor">
-                </div>
+                <span class="video-title">Tour Virtual da Sua Nova Escola</span>
+
+                <button class="play-button" aria-label="Reproduzir vídeo">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10 8L24 16L10 24V8Z" fill="currentColor" />
+                    </svg>
+                </button>
             </div>
         </div>
     </section>
@@ -136,126 +138,113 @@
         </div>
     </section>
 
-    <!-- PRICING -->
-    <section class="pricing" style="background: linear-gradient(135deg, #710014 0%, #5a0010 100%); padding: 80px 0;">
+    <!-- TESTIMONIALS -->
+    <section class="testimonials">
         <div class="container">
-            <h2 class="section-title" style="text-align: center; margin-bottom: 16px; color: #FFFFFF;">Planos simples e
-                transparentes</h2>
-            <p class="section-subtitle"
-                style="text-align: center; margin-bottom: 64px; color: rgba(255, 255, 255, 0.9); font-size: 18px;">
-                Escolha o plano ideal para o tamanho da sua escola</p>
+            <h2 class="testimonials-title">O que nossos clientes dizem</h2>
 
-            <div class="pricing-grid"
-                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px; max-width: 900px; margin: 0 auto;">
-                <!-- Starter -->
-                <div class="pricing-card"
-                    style="background: #FFFFFF; border-radius: 16px; padding: 40px; box-shadow: 0 8px 24px rgba(113, 0, 20, 0.25); display: flex; flex-direction: column; transition: transform 0.3s, box-shadow 0.3s;">
-                    <div class="pricing-header" style="margin-bottom: 24px;">
-                        <h3 class="pricing-name"
-                            style="font-size: 24px; font-weight: 700; color: #161616; margin-bottom: 8px;">Starter</h3>
-                        <p class="pricing-desc" style="font-size: 15px; color: #666;">Para quem está começando</p>
-                    </div>
-                    <div class="pricing-price" style="margin-bottom: 32px;">
-                        <span class="price-currency"
-                            style="font-size: 24px; color: #710014; font-weight: 700; vertical-align: top;">R$</span>
-                        <span class="price-value"
-                            style="font-size: 56px; font-weight: 700; color: #710014; line-height: 1;">97</span>
-                        <span class="price-period" style="font-size: 18px; color: #666;">/mês</span>
-                    </div>
-                    <ul class="pricing-features"
-                        style="list-style: none; padding: 0; margin: 0 0 32px 0; flex-grow: 1;">
-                        <li
-                            style="padding-left: 28px; margin-bottom: 16px; position: relative; color: #333; font-size: 15px;">
-                            <span
-                                style="position: absolute; left: 0; color: #710014; font-weight: 700; font-size: 18px;">✓</span>
-                            Até 15 alunos
-                        </li>
-                        <li
-                            style="padding-left: 28px; margin-bottom: 16px; position: relative; color: #333; font-size: 15px;">
-                            <span
-                                style="position: absolute; left: 0; color: #710014; font-weight: 700; font-size: 18px;">✓</span>
-                            Gestão financeira básica
-                        </li>
-                        <li
-                            style="padding-left: 28px; margin-bottom: 16px; position: relative; color: #333; font-size: 15px;">
-                            <span
-                                style="position: absolute; left: 0; color: #710014; font-weight: 700; font-size: 18px;">✓</span>
-                            Exercícios ilimitados
-                        </li>
-                        <li
-                            style="padding-left: 28px; margin-bottom: 16px; position: relative; color: #333; font-size: 15px;">
-                            <span
-                                style="position: absolute; left: 0; color: #710014; font-weight: 700; font-size: 18px;">✓</span>
-                            Suporte por email
-                        </li>
-                    </ul>
-                    <button class="btn-outline"
-                        style="width: 100%; padding: 16px 32px; border: 2px solid #710014; background: transparent; color: #710014; font-size: 16px; font-weight: 600; border-radius: 12px; cursor: pointer; transition: all 0.3s;"
-                        onmouseover="this.style.background='#710014'; this.style.color='#FFFFFF';"
-                        onmouseout="this.style.background='transparent'; this.style.color='#710014';">Começar</button>
+            <div class="testimonials-grid">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card">
+                    <img src="https://i.pravatar.cc/120?img=5" alt="Ana Silva" class="testimonial-photo">
+                    <h3 class="testimonial-name">Ana Silva</h3>
+                    <p class="testimonial-role">Diretora Escolar</p>
+                    <p class="testimonial-text">A Klassy transformou nossa gestão. Os processos são ágeis e os
+                        relatórios, precisos. Recomendo muito.</p>
                 </div>
 
-                <!-- Pro (Destaque) -->
-                <div class="pricing-card pricing-featured"
-                    style="background: #FFFFFF; border-radius: 16px; padding: 40px; box-shadow: 0 12px 32px rgba(113, 0, 20, 0.35); display: flex; flex-direction: column; transform: scale(1.05); border: 2px solid #710014; position: relative;">
-                    <div class="pricing-badge"
-                        style="position: absolute; top: -16px; left: 50%; transform: translateX(-50%); background: #710014; color: #FFFFFF; padding: 8px 24px; border-radius: 9999px; font-size: 13px; font-weight: 600; letter-spacing: 0.05em; box-shadow: 0 4px 12px rgba(113, 0, 20, 0.3); border: 2px solid #FFFFFF;">
-                        Mais Popular</div>
-                    <div class="pricing-header" style="margin-bottom: 24px; margin-top: 16px;">
-                        <h3 class="pricing-name"
-                            style="font-size: 24px; font-weight: 700; color: #161616; margin-bottom: 8px;">Pro</h3>
-                        <p class="pricing-desc" style="font-size: 15px; color: #666;">Para professores em crescimento
-                        </p>
-                    </div>
-                    <div class="pricing-price" style="margin-bottom: 32px;">
-                        <span class="price-currency"
-                            style="font-size: 24px; color: #710014; font-weight: 700; vertical-align: top;">R$</span>
-                        <span class="price-value"
-                            style="font-size: 56px; font-weight: 700; color: #710014; line-height: 1;">197</span>
-                        <span class="price-period" style="font-size: 18px; color: #666;">/mês</span>
-                    </div>
-                    <ul class="pricing-features"
-                        style="list-style: none; padding: 0; margin: 0 0 32px 0; flex-grow: 1;">
-                        <li
-                            style="padding-left: 28px; margin-bottom: 16px; position: relative; color: #333; font-size: 15px;">
-                            <span
-                                style="position: absolute; left: 0; color: #710014; font-weight: 700; font-size: 18px;">✓</span>
-                            Alunos ilimitados
-                        </li>
-                        <li
-                            style="padding-left: 28px; margin-bottom: 16px; position: relative; color: #333; font-size: 15px;">
-                            <span
-                                style="position: absolute; left: 0; color: #710014; font-weight: 700; font-size: 18px;">✓</span>
-                            Financeiro completo
-                        </li>
-                        <li
-                            style="padding-left: 28px; margin-bottom: 16px; position: relative; color: #333; font-size: 15px;">
-                            <span
-                                style="position: absolute; left: 0; color: #710014; font-weight: 700; font-size: 18px;">✓</span>
-                            Gamificação avançada
-                        </li>
-                        <li
-                            style="padding-left: 28px; margin-bottom: 16px; position: relative; color: #333; font-size: 15px;">
-                            <span
-                                style="position: absolute; left: 0; color: #710014; font-weight: 700; font-size: 18px;">✓</span>
-                            Suporte prioritário
-                        </li>
-                        <li
-                            style="padding-left: 28px; margin-bottom: 16px; position: relative; color: #333; font-size: 15px;">
-                            <span
-                                style="position: absolute; left: 0; color: #710014; font-weight: 700; font-size: 18px;">✓</span>
-                            Relatórios personalizados
-                        </li>
-                    </ul>
-                    <button class="btn-primary"
-                        style="width: 100%; padding: 16px 32px; border: none; background: #710014; color: #FFFFFF; font-size: 16px; font-weight: 600; border-radius: 12px; cursor: pointer; transition: all 0.3s; box-shadow: 0 4px 12px rgba(113, 0, 20, 0.2);"
-                        onmouseover="this.style.background='#8a0018'; this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 16px rgba(113, 0, 20, 0.3)';"
-                        onmouseout="this.style.background='#710014'; this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 12px rgba(113, 0, 20, 0.2)';">Começar
-                        Agora</button>
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card">
+                    <img src="https://i.pravatar.cc/120?img=12" alt="Carlos Ferreira" class="testimonial-photo">
+                    <h3 class="testimonial-name">Carlos Ferreira</h3>
+                    <p class="testimonial-role">Professor de Matemática</p>
+                    <p class="testimonial-text">O engajamento dos alunos aumentou incrivelmente com a plataforma.
+                        Facilitou meu dia a dia.</p>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card">
+                    <img src="https://i.pravatar.cc/120?img=9" alt="Mariana Santos" class="testimonial-photo">
+                    <h3 class="testimonial-name">Mariana Santos</h3>
+                    <p class="testimonial-role">Gestora Pedagógica</p>
+                    <p class="testimonial-text">Excelente suporte e interface intuitiva. A gestão de notas e comunicação
+                        com os pais ficou simples.</p>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- PRICING -->
+    <section class="pricing">
+        <!-- Background Layers -->
+        <div class="pricing-background-top"></div>
+        <div class="pricing-background-bottom"></div>
+
+        <!-- Decorative Organic Shapes -->
+        <div class="decorative-shape-left">
+            <div class="shape-outer"></div>
+            <div class="shape-inner"></div>
+        </div>
+        <div class="decorative-shape-right">
+            <div class="shape-outer"></div>
+            <div class="shape-inner"></div>
+        </div>
+
+        <!-- Content -->
+        <div class="container">
+            <div class="pricing-header">
+                <h2 class="section-title">Planos simples e transparentes</h2>
+                <p class="section-subtitle">Escolha o plano ideal para o tamanho da sua escola</p>
+            </div>
+
+            <div class="pricing-cards-wrapper">
+                <!-- Starter Plan -->
+                <div class="pricing-card">
+                    <div class="card-header">
+                        <h3 class="plan-name">Starter</h3>
+                        <p class="plan-desc">Para quem está começando</p>
+                    </div>
+                    <div class="plan-price">
+                        <span class="price-currency">R$</span>
+                        <span class="price-value">97</span>
+                        <span class="price-period">/mês</span>
+                    </div>
+                    <hr class="plan-divider">
+                    <ul class="plan-features">
+                        <li><span class="check-icon">✓</span>Até 15 alunos</li>
+                        <li><span class="check-icon">✓</span>Gestão financeira básica</li>
+                        <li><span class="check-icon">✓</span>Exercícios ilimitados</li>
+                        <li><span class="check-icon">✓</span>Suporte por email</li>
+                    </ul>
+                    <button class="plan-cta">Começar</button>
+                </div>
+
+                <!-- Pro Plan -->
+                <div class="pricing-card">
+                    <div class="card-header">
+                        <h3 class="plan-name">Pro</h3>
+                        <p class="plan-desc">Para professores em crescimento</p>
+                    </div>
+                    <div class="plan-price">
+                        <span class="price-currency">R$</span>
+                        <span class="price-value">197</span>
+                        <span class="price-period">/mês</span>
+                    </div>
+                    <hr class="plan-divider">
+                    <ul class="plan-features">
+                        <li><span class="check-icon">✓</span>Alunos ilimitados</li>
+                        <li><span class="check-icon">✓</span>Financeiro completo</li>
+                        <li><span class="check-icon">✓</span>Gamificação avançada</li>
+                        <li><span class="check-icon">✓</span>Suporte prioritário</li>
+                        <li><span class="check-icon">✓</span>Relatórios personalizados</li>
+                    </ul>
+                    <button class="plan-cta">Começar Agora</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
 
     <!-- FINAL CTA -->
     <section class="cta" style="padding: 60px 0 180px 0;">
@@ -372,6 +361,168 @@
             el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
             observer.observe(el);
         });
+
+        // ===== VIDEO MODAL FUNCTIONALITY =====
+        const videoCard = document.querySelector('.video-card');
+
+        if (videoCard) {
+            // Create modal structure
+            const modal = document.createElement('div');
+            modal.className = 'video-modal';
+            modal.innerHTML = `
+                <div class="video-modal-overlay"></div>
+                <div class="video-modal-content">
+                    <button class="video-modal-close" aria-label="Fechar vídeo">&times;</button>
+                    <div class="video-modal-player">
+                        <!-- Replace with actual video embed URL -->
+                        <iframe 
+                            width="100%" 
+                            height="100%" 
+                            src="" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+            `;
+            document.body.appendChild(modal);
+
+            // Add modal styles
+            const modalStyles = document.createElement('style');
+            modalStyles.textContent = `
+                .video-modal {
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    z-index: 9999;
+                    display: none;
+                    align-items: center;
+                    justify-content: center;
+                    opacity: 0;
+                    transition: opacity 0.3s ease;
+                }
+                
+                .video-modal.active {
+                    display: flex;
+                    opacity: 1;
+                }
+                
+                .video-modal-overlay {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: rgba(0, 0, 0, 0.9);
+                    cursor: pointer;
+                }
+                
+                .video-modal-content {
+                    position: relative;
+                    width: 90%;
+                    max-width: 1200px;
+                    aspect-ratio: 16 / 9;
+                    background: #000;
+                    border-radius: 12px;
+                    overflow: hidden;
+                    z-index: 1;
+                    transform: scale(0.9);
+                    transition: transform 0.3s ease;
+                }
+                
+                .video-modal.active .video-modal-content {
+                    transform: scale(1);
+                }
+                
+                .video-modal-close {
+                    position: absolute;
+                    top: -50px;
+                    right: 0;
+                    width: 40px;
+                    height: 40px;
+                    background: transparent;
+                    border: none;
+                    color: #fff;
+                    font-size: 40px;
+                    cursor: pointer;
+                    z-index: 2;
+                    transition: transform 0.2s ease;
+                }
+                
+                .video-modal-close:hover {
+                    transform: scale(1.1);
+                }
+                
+                .video-modal-player {
+                    width: 100%;
+                    height: 100%;
+                }
+                
+                @media (max-width: 768px) {
+                    .video-modal-content {
+                        width: 95%;
+                    }
+                    
+                    .video-modal-close {
+                        top: -40px;
+                        font-size: 32px;
+                    }
+                }
+            `;
+            document.head.appendChild(modalStyles);
+
+            // Open modal function
+            function openVideoModal() {
+                // Replace with actual YouTube/Vimeo embed URL
+                const videoUrl = 'https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1';
+                const iframe = modal.querySelector('iframe');
+                iframe.src = videoUrl;
+
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+
+            // Close modal function
+            function closeVideoModal() {
+                modal.classList.remove('active');
+                document.body.style.overflow = '';
+
+                // Stop video by removing src
+                setTimeout(() => {
+                    const iframe = modal.querySelector('iframe');
+                    iframe.src = '';
+                }, 300);
+            }
+
+            // Event listeners
+            videoCard.addEventListener('click', openVideoModal);
+
+            // Keyboard accessibility
+            videoCard.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    openVideoModal();
+                }
+            });
+
+            // Close modal events
+            const closeBtn = modal.querySelector('.video-modal-close');
+            const overlay = modal.querySelector('.video-modal-overlay');
+
+            closeBtn.addEventListener('click', closeVideoModal);
+            overlay.addEventListener('click', closeVideoModal);
+
+            // ESC key to close
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && modal.classList.contains('active')) {
+                    closeVideoModal();
+                }
+            });
+        }
+
 
         // ===== FOOTER SCROLLYTELLING EFFECT =====
         const footer = document.querySelector('.footer');
